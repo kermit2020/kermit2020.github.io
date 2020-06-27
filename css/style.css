@@ -1471,14 +1471,22 @@ a:hover,a:active {
     float:left;
     margin:0 13px;
     position:relative;
-    -webkit-transition:all 1s ease
+    -webkit-transition:all 1s ease ;
 }
 .site-top ul li a {
     padding:10px 0;
     display:inline-block;
-    color:#666
+    /* color:#666 */
+    color:#111
+}
+.site-top ul li span {
+   
+    color:white
 }
 .site-top ul li a:hover {
+    color:orange
+}
+.site-top ul li a span:hover {
     color:orange
 }
 .site-top ul li a:after {
@@ -1566,9 +1574,10 @@ a:hover,a:active {
     top:-20px;
     left:50%;
     margin-left:-10px;
-    border-width:10px;
+    /* border-width:10px;
     border-style:solid;
-    border-color:transparent transparent #fff transparent
+    border-color:transparent transparent #fff transparent */
+    border: 10px solid (transparent transparent #fff transparent);
 }
 @-webkit-keyframes fadeInUp {
     0% {
@@ -4203,7 +4212,8 @@ li.feature-2 {
     color:#999
 }
 i.iconfont.js-toggle-search.iconsearch {
-    color:#666;
+    color:white;
+    /* color:#666; */
     cursor:pointer;
     font-size:26px;
     -webkit-transition:all 300ms ease-in-out;
@@ -5811,7 +5821,8 @@ button.botui-actions-buttons-button {
     color:orange
 }
 .logolink.moe-mashiro a {
-    color:#464646;
+    /* color:#464646; */
+    color:white;
     float:left;
     font-size:28px;
     font-weight:800;
