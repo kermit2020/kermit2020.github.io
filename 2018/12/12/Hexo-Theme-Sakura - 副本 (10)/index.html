@@ -55,7 +55,7 @@
   /*End of Initial Variables*/
   </script>
   <script type="text/javascript">
-  var bg = "https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(1).jpg.webp,https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(2).jpg.webp,https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(3).jpg.webp,https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(4).jpg.webp,https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(5).jpg.webp,https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(6).jpg.webp,https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(7).jpg.webp,https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(8).jpg.webp".split(",");
+  var bg = "https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(2).jpg.webp,https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(4).jpg.webp,https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(5).jpg.webp,https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(6).jpg.webp,https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(7).jpg.webp,https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/cover/(8).jpg.webp,https://cdn.jsdelivr.net/gh/uncleacc/CDN/img/cover/2.webp,https://cdn.jsdelivr.net/gh/uncleacc/CDN/img/cover/1.webp,https://cdn.jsdelivr.net/gh/uncleacc/CDN/img/cover/4.webp".split(",");
   var bgindex = Math.floor(Math.random()*bg.length);
   if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
     alert('朋友，IE浏览器未适配哦~');
@@ -70,11 +70,11 @@
 </html>
 <style>
   /* 改变头部bar色彩 */
-  .site-header{
+  /* .site-header{
     background-image: linear-gradient(to right,#bf30ac 0,#0f9d58 100%);
     opacity: .9;
     color: white;
-  }
+  } */
 
   /* #colophon{
     background-image: linear-gradient(to right,#bf30ac 0,#0f9d58 100%);
@@ -92,9 +92,9 @@
   <div id="banner_wave_2"></div>
   <figure id="centerbg" class="centerbg">
     <div class="focusinfo no-select">
-      <div class="header-tou">
+      <div class="header-tou" id="clickMe">
         <a href="https://kermit2020.github.io">
-          <img src="/img/custom/timg.jpg">
+          <img  src="/img/custom/timg.jpg">
         </a>
       </div>
       <div class="header-info">
@@ -767,7 +767,7 @@ links:
           
             <div class="post-nepre half previous">
           
-            <a href="/2018/12/12/Hexo-Theme-Sakura - 副本 (8)/" rel="prev">
+            <a href="/2018/12/12/Hexo-Theme-Sakura - 副本 (2)/" rel="prev">
               <div class="background">
                 <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://static.2heng.xin/wp-content/uploads//2019/02/wallhaven-672007-1-1024x576.png" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://static.2heng.xin/wp-content/uploads//2019/02/wallhaven-672007-1-1024x576.png">
               </div>
@@ -785,7 +785,7 @@ links:
           
             <div class="post-nepre half next">
           
-            <a href="/2018/12/12/Hexo-Theme-Sakura - 副本 (15)/" rel="next">
+            <a href="/2018/12/12/Hexo-Theme-Sakura - 副本 (13)/" rel="next">
               <div class="background">
                 <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://static.2heng.xin/wp-content/uploads//2019/02/wallhaven-672007-1-1024x576.png" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://static.2heng.xin/wp-content/uploads//2019/02/wallhaven-672007-1-1024x576.png">
               </div>
@@ -909,78 +909,78 @@ links:
               style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Sakura</a> <i
               class="iconfont icon-sakura rotating" style="color: #ffc0cb;display:inline-block"></i> by
             <!-- <a href="https://2heng.xin/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);"> -->
-              Mashiro
+            Mashiro
             <!-- </a> -->
             &
             <!-- <a href="https://www.hojun.cn/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);"> -->
-              Hojun
+            Hojun
             <!-- </a> -->
             , Powered by Hexo,
             Hosted by Coding Pages</a>
           </span>
         </p>
       </div>
-      
+
   </div><!-- .site-info -->
   <!-- 导航小妹妹 -->
   <script
-  type='text/javascript'>var HermitX = { "ajaxurl": "https:\/\/2heng.xin\/wp-admin\/admin-ajax.php", "version": "2.9.6" };</script>
+    type='text/javascript'>var HermitX = { "ajaxurl": "https:\/\/2heng.xin\/wp-admin\/admin-ajax.php", "version": "2.9.6" };</script>
   <script
-  type='text/javascript'>var Poi = { "pjax": "1", "movies": { "url": "https:\/\/cdn.jsdelivr.net\/gh\/moezx\/cdn@3.1.3\/", "name": "The Pet Girl of Sakurasou", "live": "close" }, "windowheight": "auto", "codelamp": "close", "ajaxurl": "https:\/\/2heng.xin\/wp-admin\/admin-ajax.php", "order": "desc", "formpostion": "bottom" };</script>
-  
- <script type='text/javascript'
-  src='https://cdn.jsdelivr.net/gh/moeplayer/hermit-x@2.9.6/assets/js/hermit-load.min.js?ver=2.9.6'></script>
+    type='text/javascript'>var Poi = { "pjax": "1", "movies": { "url": "https:\/\/cdn.jsdelivr.net\/gh\/moezx\/cdn@3.1.3\/", "name": "The Pet Girl of Sakurasou", "live": "close" }, "windowheight": "auto", "codelamp": "close", "ajaxurl": "https:\/\/2heng.xin\/wp-admin\/admin-ajax.php", "order": "desc", "formpostion": "bottom" };</script>
 
-  <script type='text/javascript' src='https://cdn.jsdelivr.net/gh/moezx/cdn@3.7.5/js/lib.min.js?ver=3.1.5'></script>
- <script type='text/javascript' src='https://cdn.jsdelivr.net/github-cards/latest/widget.js?ver=3.1.5'></script>
-<div id="aplayer-float" style="z-index: 100;" class="aplayer" data-id="2288037900" data-server="netease"
- data-type="playlist" data-fixed="true" data-preload="none" data-order="random" data-theme="orange"></div>
-<div class="prpr">
- <div class="mashiro-tips"></div><canvas id="live2d" width="280" height="250" class="live2d"></canvas>
-</div>
-<div class="live2d-tool hide-live2d no-select" onclick="hide_live2d()">
- <div class="keys">Hide</div>
-</div>
-<div class="live2d-tool switch-live2d no-select" onclick="switch_pio()">
- <div class="keys">Switch</div>
-</div>
-<div class="live2d-tool save-live2d no-select" onclick="save_pio()">
- <div class="keys">Save</div>
-</div>
+  <script type='text/javascript'
+    src='https://cdn.jsdelivr.net/gh/moeplayer/hermit-x@2.9.6/assets/js/hermit-load.min.js?ver=2.9.6'></script>
+  <!-- lib.js迁移到顶部jquery下 -->
+  <script type='text/javascript' src='https://cdn.jsdelivr.net/github-cards/latest/widget.js?ver=3.1.5'></script>
+  <div id="aplayer-float" style="z-index: 100;" class="aplayer" data-id="2288037900" data-server="netease"
+    data-type="playlist" data-fixed="true" data-preload="none" data-order="random" data-theme="orange"></div>
+  <div class="prpr">
+    <div class="mashiro-tips"></div><canvas id="live2d" width="280" height="250" class="live2d"></canvas>
+  </div>
+  <div class="live2d-tool hide-live2d no-select" onclick="hide_live2d()">
+    <div class="keys">Hide</div>
+  </div>
+  <div class="live2d-tool switch-live2d no-select" onclick="switch_pio()">
+    <div class="keys">Switch</div>
+  </div>
+  <div class="live2d-tool save-live2d no-select" onclick="save_pio()">
+    <div class="keys">Save</div>
+  </div>
 
-<!--壁纸切换 -->
-<div class="changeSkin-gear no-select ">
-<div class="keys"> <span id="open-skinMenu"> 切换主题 | SCHEME TOOL &nbsp;<i
-     class="iconfont icon-gear inline-block rotating"></i> </span></div>
-</div> 
-<div class="skin-menu no-select show">
-<div class="theme-controls row-container">
- <ul class="menu-list">
-   <li id="white-bg"> <i class="fa fa-television" aria-hidden="true"></i></li>
-   <li id="sakura-bg"> <i class="iconfont icon-sakura"></i></li>
-   <li id="gribs-bg"> <i class="fa fa-slack" aria-hidden="true"></i></li>
-   <li id="KAdots-bg"> <i class="iconfont icon-dots"></i></li>
-   <li id="totem-bg"> <i class="fa fa-optin-monster" aria-hidden="true"></i></li>
-   <li id="pixiv-bg"> <i class="iconfont icon-pixiv"></i></li>
-   <li id="bing-bg"> <i class="iconfont icon-bing"></i></li>
-   <li id="dark-bg"> <i class="fa fa-moon-o" aria-hidden="true"></i></li>
- </ul>
-</div>
-<div class="font-family-controls row-container"> <button type="button" class="control-btn-serif selected"
-   data-mode="serif" onclick="mashiro_global.font_control.change_font()">Serif</button> <button type="button"
-   class="control-btn-sans-serif" data-mode="sans-serif" onclick="mashiro_global.font_control.change_font()">Sans
-   Serif</button></div>
-</div>
+  <!--壁纸切换 -->
+  <div class="changeSkin-gear no-select ">
+    <div class="keys"> <span id="open-skinMenu"> 切换主题 | SCHEME TOOL &nbsp;<i
+          class="iconfont icon-gear inline-block rotating"></i> </span></div>
+  </div>
+  <div class="skin-menu no-select show">
+    <div class="theme-controls row-container">
+      <ul class="menu-list">
+        <li id="white-bg"> <i class="fa fa-television" aria-hidden="true"></i></li>
+        <li id="sakura-bg"> <i class="iconfont icon-sakura"></i></li>
+        <li id="gribs-bg"> <i class="fa fa-slack" aria-hidden="true"></i></li>
+        <li id="KAdots-bg"> <i class="iconfont icon-dots"></i></li>
+        <li id="totem-bg"> <i class="fa fa-optin-monster" aria-hidden="true"></i></li>
+        <li id="pixiv-bg"> <i class="iconfont icon-pixiv"></i></li>
+        <li id="bing-bg"> <i class="iconfont icon-bing"></i></li>
+        <li id="dark-bg"> <i class="fa fa-moon-o" aria-hidden="true"></i></li>
+      </ul>
+    </div>
+    <div class="font-family-controls row-container"> <button type="button" class="control-btn-serif selected"
+        data-mode="serif" onclick="mashiro_global.font_control.change_font()">Serif</button> <button type="button"
+        class="control-btn-sans-serif" data-mode="sans-serif" onclick="mashiro_global.font_control.change_font()">Sans
+        Serif</button></div>
+  </div>
 
-<canvas id="night-mode-cover"></canvas>
+  <canvas id="night-mode-cover"></canvas>
 
 
-<!-- 结束 -->
+  <!-- 结束 -->
 </footer>
-<div style="text-align: center;"><img src="https://cdn.jsdelivr.net/gh/drew233/cdn//20191003172815.webp" style="position: relative; top: 80px; " alt=""></div>
+<div style="text-align: center;"><img src="https://cdn.jsdelivr.net/gh/drew233/cdn//20191003172815.webp"
+    style="position: relative; top: 80px; " alt=""></div>
 <!-- <script src="/js/tocbot.js"></script> -->
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
-<script type="text/javascript" src="/js/lib.min.js"></script>
+<script type='text/javascript' src='https://cdn.jsdelivr.net/gh/moezx/cdn@3.7.5/js/lib.min.js?ver=3.1.5'></script>
 <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
 <script type="text/javascript" src="/js/InsightSearch.js"></script>
 <!--  -->
@@ -990,14 +990,12 @@ links:
 <!-- 这可能是作者后写的 -->
 <script type="text/javascript" src="/js/sakura-app.js"></script>
 <!-- 这段是导航小妹妹的,这里采用了延迟加载于是就出了问题 defer已知这对背景框有影响-->
-<script  
-src="/js/sister.js"></script>
+<script src="/js/sister.js"></script>
 <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
 <script src='//unpkg.com/valine@1.3.4/dist/Valine.min.js'></script>
 <script src="/js/botui.js"></script>
 <!-- 不蒜子 网页计数器 -->
 <script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script> -->
 
 <script type="text/javascript">
   /* <![CDATA[ */
@@ -1052,22 +1050,15 @@ src="/js/sister.js"></script>
 
 <!-- 动态线条 -->
 <!-- <script src="https://cdn.jsdelivr.net/gh/wallleap/cdn/js/canvas-nest.min.js"></script> -->
-<!-- 彩带 -->
-<script src="https://cdn.jsdelivr.net/gh/wallleap/cdn/js/piao.js"></script>
 <!-- 樱花飘落 -->
 <script src="https://cdn.jsdelivr.net/gh/wallleap/cdn/js/sakura.js"></script>
 <!-- 伴娘 {-->
 <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"> -->
-<!-- 这条在sakura中已有，可不添加 }-->
+<!-- 伴娘加载判断不可min压缩 }-->
 <!-- <script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script> -->
 <!-- 预加载 不知道有什么用-->
 <!-- <script src="//instant.page/3.0.0" type="module" defer
   integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script> -->
-
-
-  
- 
- 
     <div class="openNav no-select" style="height: 50px;">
       <div class="iconflat no-select" style="width: 50px; height: 50px;">
         <div class="icon"></div>
