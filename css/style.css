@@ -7340,6 +7340,7 @@ to {
     background:#21252b;
     border-radius:5px;
     font:15px/22px "Microsoft YaHei","Arial",Sans-Serif;
+    /* font:15px/22px rubik,microsoft yahei,wenquanyi micro hei,sans-serif; */
     line-height:1.6;
     margin-bottom:1.6em;
     max-width:100%;
@@ -7372,11 +7373,31 @@ to {
     -webkit-box-shadow:inset 0 0 6px rgba(0,0,0,.5) !important;
     background-color:#21252b !important
 }
+/* [k0720a010] */
+.hljs-ln-line{
+   /* 注释这句或者下面两句，解决有时候会显示垂直滚动条问题 */
+    width: 100% ;
+    
+    padding-left: 10px;
+    padding-right: 10px;
+     /*自动换行，不显示横向滚动条 */
+    white-space: pre-wrap  ;
+   /* 自动换行，不显示横向滚动条 */
+    word-wrap: break-word  ;
+    
+}
+.hljs-ln-code{
+  margin: 0;
+}
+*{
+  outline: none;
+}
 .highlight-wrap code {
-    background:#1d1f21;
+    background:#2f3142;
     color:#fff;
     word-break:break-word;
-    font-family:'Source Code Pro',monospace,Helvetica,Tahoma,Arial,STXihei,"STHeiti Light","Microsoft YaHei",sans-serif;
+    /* font-family:'Source Code Pro',monospace,Helvetica,Tahoma,Arial,STXihei,"STHeiti Light","Microsoft YaHei",sans-serif; */
+    font-family:rubik,microsoft yahei,wenquanyi micro hei,sans-serif;
     padding:2px;
     text-shadow:none;
     border-radius:0 0 5px 5px;
@@ -7450,7 +7471,8 @@ to {
     text-decoration:underline
 }
 .hljs-ln {
-    margin:6px 0 0 0 !important
+  padding-top:10px ;
+    margin:3px 0 0 0 !important
 }
 .highlight td.numbers {
     -webkit-touch-callout:none;
@@ -7844,7 +7866,7 @@ td.hljs-ln-numbers {
     font-family: 'Source Code Pro',monospace,Helvetica,Tahoma,Arial,STXihei,"STHeiti Light","Microsoft YaHei",sans-serif;
     vertical-align: top;
     left: 0;
-    width: 30px;
+    width: 50px;
 }
 .post-share:hover .show-share, .post-share:hover .sharehidden {
     opacity: 1;
