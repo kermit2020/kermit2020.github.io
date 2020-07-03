@@ -1367,7 +1367,8 @@ a:hover,a:active {
     z-index:9999
 }
 .site-header:hover {
-    background-color:#fff
+  background-image: linear-gradient(to right,#bf30ac 0,#0f9d58 100%);
+  opacity: .9;
 }
 .sabit {
     top:0;
@@ -7386,11 +7387,8 @@ to {
     word-wrap: break-word  ;
     
 }
-.hljs-ln-code{
-  margin: 0;
-}
-*{
-  outline: none;
+.hljs-ln tr>td {
+  padding-top: 3px;
 }
 .highlight-wrap code {
     background:#2f3142;
@@ -7866,7 +7864,7 @@ td.hljs-ln-numbers {
     font-family: 'Source Code Pro',monospace,Helvetica,Tahoma,Arial,STXihei,"STHeiti Light","Microsoft YaHei",sans-serif;
     vertical-align: top;
     left: 0;
-    width: 50px;
+    width: 60px;
 }
 .post-share:hover .show-share, .post-share:hover .sharehidden {
     opacity: 1;

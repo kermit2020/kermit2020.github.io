@@ -40,7 +40,7 @@
   mashiro_option.email_name = "";
   mashiro_option.cookie_version_control = "";
   mashiro_option.qzone_autocomplete = false;
-  mashiro_option.site_name = "生きた心のkermit酱";
+  mashiro_option.site_name = "生煎のkermit酱";
   mashiro_option.author_name = "kermit酱";
   mashiro_option.site_url = "https://kermit2020.github.io";
   mashiro_option.v_appId = "GyC3NzMvd0hT9Yyd2hYIC0MN-gzGzoHsz";
@@ -94,11 +94,11 @@
     <div class="focusinfo no-select">
       <div class="header-tou" id="clickMe">
         <a href="https://kermit2020.github.io">
-          <img  src="https://avatars3.githubusercontent.com/u/65220108?s=460&u=18258b334e7d84559d75b5bbf0a82921b38856ab&v=4">
+          <img  src="/img/custom/timg.jpg">
         </a>
       </div>
       <div class="header-info">
-        <p>Live your life with passion! With some drive!</p>
+        <p>真正的大师永远怀着一颗学徒的心</p>
         <div class="top-social_v2">
           <li id="bg-pre">
             <img class="flipx" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
@@ -189,7 +189,7 @@
       <span class="site-title">
         <span class="logolink moe-mashiro">
           <a href="/">
-            <span class="sakurasono">生きた心の</span>
+            <span class="sakurasono">生煎の</span>
             <span class="shironeko">kermit酱</span>
           </a>
         </span>
@@ -525,6 +525,74 @@ function validatePIN (pin) {
 这时候需要使用python语言编写的flashtext(原理是树型排序搜索),但这似乎无法替换特殊字符
 显然在面对大数据时,正则不如---2---方法好,但--3--因为用了for循环依然不好
 </code></pre>
+<h2 id="3-过滤字符串"><a href="#3-过滤字符串" class="headerlink" title="3.过滤字符串"></a>3.过滤字符串</h2><pre><code class="js">In this kata you will create a function that takes a list of non-negative integers and strings and returns a new list with the strings filtered out.
+
+Example
+filter_list([1,2,&#39;a&#39;,&#39;b&#39;]) == [1,2]
+filter_list([1,&#39;a&#39;,&#39;b&#39;,0,15]) == [1,0,15]
+filter_list([1,2,&#39;aasf&#39;,&#39;1&#39;,&#39;123&#39;,123]) == [1,2,123]
+----我的解答--应该是完美答案了--
+function filter_list(l) {
+ return  l.filter(i=&gt;i+0==i)
+  }
+---明星答案---
+ function filter_list(l) {
+ return l.filter(v =&gt; typeof v == &quot;number&quot;)
+} 
+---2----
+function filter_list(l) {
+  return l.filter(i=&gt; typeof i !== &#39;string&#39;);
+}
+----3-----
+ const filter_list = l =&gt; l.filter(Number.isInteger);
+------4-----
+ const filter_list = l =&gt; l.filter(n =&gt; n === +n) 终于写的比他们都短了...  
+</code></pre>
+<p>4.遮盖显示</p>
+<pre><code class="js">Usually when you buy something, you&#39;re asked whether your credit card number, phone number or answer to your most secret question is still correct. However, since someone could look over your shoulder, you don&#39;t want that shown on your screen. Instead, we mask it.
+
+Your task is to write a function maskify, which changes all but the last four characters into &#39;#&#39;.
+
+Examples
+maskify(&quot;4556364607935616&quot;) == &quot;############5616&quot;
+maskify(     &quot;64607935616&quot;) ==      &quot;#######5616&quot;
+maskify(               &quot;1&quot;) ==                &quot;1&quot;
+maskify(                &quot;&quot;) ==                 &quot;&quot;
+------我的解答------
+function maskify(x) {
+let k =&#39;&#39;
+if(x.length&gt;4){
+for(i=0;i&lt;x.length-4;i++){
+k +=&#39;#&#39;
+}
+return k+=x.substr(x.length-4,x.length)}
+return x
+}
+---1----
+function maskify(cc) {
+  return cc.replace(/(?=.{5})./g, &#39;#&#39;)
+}
+---2---
+    //这个递归稍微浪费性能,但正则也省不了多少
+function maskify(cc) {
+  if (cc.length &lt;= 4) return cc
+  else return &quot;#&quot; + maskify(cc.substring(1,cc.length))
+}  
+---3----
+function maskify(cc) {
+  return cc.slice(0, -4).replace(/./g, &#39;#&#39;) + cc.slice(-4);
+}
+---4---
+    function maskify(cc){
+  return cc.substr(0, cc.length - 4).replace(/./g, &#39;#&#39;) + cc.substr(-4)
+}
+--5----
+function maskify(cc) {
+  return cc.slice(-4).padStart(cc.length, &#39;#&#39;);
+}
+有太多方法了,,完全不知所云了
+性能上没啥区别就不追求了
+</code></pre>
 
         </div>
         <!-- .entry-content -->
@@ -842,9 +910,9 @@ function validatePIN (pin) {
   </section>
   <div id="mo-nav" class="">
   <div class="m-avatar">
-    <img src="https://avatars3.githubusercontent.com/u/65220108?s=460&u=18258b334e7d84559d75b5bbf0a82921b38856ab&v=4">
+    <img src="/img/custom/timg.jpg">
   </div>
-  <p style="text-align: center; color: #333; font-weight: 900; font-family: 'Ubuntu', sans-serif; letter-spacing: 1.5px">生きた心のkermit酱</p>
+  <p style="text-align: center; color: #333; font-weight: 900; font-family: 'Ubuntu', sans-serif; letter-spacing: 1.5px">生煎のkermit酱</p>
   <p style="text-align: center; word-spacing: 20px;">
     
       
