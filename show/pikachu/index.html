@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,user-scaleable=no,
+     initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>画一只皮卡丘给你看</title>
+    <style id="styleTag"></style>
+    <style>
+            *{margin: 0;padding: 0;box-sizing: border-box}
+            *::after{box-sizing: border-box;}
+            *::before{box-sizing: border-box;}
+            body{
+                position: relative;
+                height: 100vh;
+                display: flex;
+                flex-direction: column
+            }
+            .code-wrapper{
+                flex:1;
+                height:50%;
+            }
+            #code{
+                overflow: hidden;
+                height: 100%;
+                }
+            .preview-wrapper{
+                flex: 1;
+                display: flex;
+                height: 50%;
+                width: 100%; 
+                min-width: 600px;
+                min-height:400px;
+            }
+            .actions{
+                position: absolute;
+                right: 0;
+                top: 0;
+                display:flex;
+                flex-direction: column;
+
+            }
+            .actions>button{
+                margin: 20px;
+                padding: 8px 10px;
+                background: #ddd;
+            }
+            .actions>button.active{
+               box-shadow: 1px 1px 1px rgba(0,0,0,0.8)
+            }
+        </style>
+</head>
+<body>
+    <div class="code-wrapper">
+        <pre id="code">
+            
+        </pre>
+    </div>
+    <div class="preview-wrapper">
+        <div class="preview">
+                <div class="main">
+                    <div class="pikachu">
+                        <div class="eye left"></div>
+                        <div class="eye right"></div>
+                        <div class="cheek left"></div>
+                        <div class="cheek right"></div>
+                        <div class="nose"></div>
+                        <div class="mustache left"></div>
+                        <div class="mustache right"></div>
+                        <div class="lipWrapper">
+                        <div class="lip"></div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <div class="actions">
+        <button data-speed='slow'>慢速</button>
+        <button data-speed='normal' class="active">中速</button>
+        <button data-speed='fast'>快速</button>
+    </div>
+    <script src="./jquery3.3.1.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>
