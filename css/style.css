@@ -1232,7 +1232,7 @@ a:hover,a:active {
 }
 .pattern-center-blank {
     padding-top:75px;
-    /* nav背景 */
+    /*[a012] nav背景 */
     background-image: linear-gradient(to right,#bf30ac 0,#0f9d58 100%);
   opacity: .9;
 }
@@ -3982,7 +3982,7 @@ li.feature-2 {
     width: 100%;
     z-index: 0;
 }
-}.blank {
+.blank {
     padding-top:80px;
     background-color:rgba(255,255,255,1)
 }
