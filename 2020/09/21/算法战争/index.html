@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">初恋的程序世界 | kermit</title>
+  <title itemprop="name">算法战争(一) | kermit</title>
   
     <link rel="shortcut icon" href="/img/favicon.ico">
   
@@ -412,11 +412,11 @@
 
   <div class="pattern-center single-center">
     <!-- 有配图默认渲染第一张 -->
-    <div class="pattern-attachment-img lazyload" style="background-image: url(https://2heng.xin/wp-content/uploads//2018/05/20170306_blue_sunrise_007_2560_by_macrebisz-db1bzsp.jpg);" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://2heng.xin/wp-content/uploads//2018/05/20170306_blue_sunrise_007_2560_by_macrebisz-db1bzsp.jpg">
+    <div class="pattern-attachment-img lazyload" style="background-image: url(http://n.sinaimg.cn/spider2020615/661/w1920h1141/20200615/9d44-iuzasxs5501817.jpg);" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="http://n.sinaimg.cn/spider2020615/661/w1920h1141/20200615/9d44-iuzasxs5501817.jpg">
     </div>
     <header class="pattern-header single-header">
       <h1 class="entry-title">
-      初恋的程序世界</h1>
+      算法战争(一)</h1>
       <p class="entry-census">
         <span>
           <a href="">
@@ -428,7 +428,7 @@
         </span>
         <span class="bull">
         ·</span>
-        2020-7-19<span class="bull">
+        2020-9-21<span class="bull">
         ·</span>
       <span id="busuanzi_value_page_pv"></span>次阅读</p>
     </header>
@@ -442,10 +442,239 @@
         <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
         
         <div class="entry-content">
-          <p>  <font size="18">本</font><font color="green">以为程序世界与我无缘,最近整理了下e-mail才发现,这是我儿时的一个梦想,如今也算圆了初梦.</font><br>  这个程序世界是什么样的呢?下面是我对此的描述:<br>  我们赖以生存的地球,只是无尽宇宙中的一颗玻璃球,只因彩色而那么耀眼.<br>  宇宙其实是一个巨人的抽屉,因为被关上了,所以黑洞洞的.<br>  而我正在对这个抽屉充满好奇,试图打开它…</p>
-<p><font color="#629">对的,程序世界就是宇宙,里面充满了星辰…but最初的我并不是这样认为的.</font><br>初遇如同热恋那么美好,我以为只是短暂的相遇,这种感觉就会消退.<br>美好的初恋充满激情,对此,我就像找到了一个大礼包.于是我拉开了丝带,揭开了序幕.<br>…省却一万字的惊叹与满足,这个礼包确实很巨份量.<br>我惊喜的发现大礼包里,还有几个大礼包.<br>…省却一百万字的惊叹与满足,这些礼包确实很巨份量.<br>我惊奇的发现大礼包里,每个里面还有几十个大礼包.<br>…省却一千万字的惊叹与满足,这些礼包确实很巨份量.<br>我惊恐的发现大礼包里,每个里面还有几十万个大礼包.<br>…我在忙着拆礼包…..的一生…得…还没..拆….完orz</p>
-<p>还好,还好,我经历过人生的波澜,面对无尽的大海,也能取之有道.</p>
-<p><font color="#926">进化吧少年…偶,不,大叔…</font><br>婴儿类大叔诞生&gt;翻滚&gt;坐立&gt;爬行&gt;站立&gt;迈出第一步&gt;迈出第二步&gt;走起来啦&gt;跑起来&gt;跳起来&gt;骑上玩具三轮车&gt;跨上脚踏车&gt;推动平衡车&gt;实战自行车&gt;丢下电瓶车&gt;取得C驾照&gt;晋升B驾照&gt;获得A驾照&gt;成为多装甲工程兵…(有时候跨度有点大..)&gt;开上了坦克..&gt;改装了坦克..&gt;部署了激光制导&gt;更换换掉HE弹,AP弹&gt;继续更换掉APCR弹&gt;开上了电磁坦克&gt;搭上了空降悬挂&gt;改装成跳跃式机器人&gt;变形成飞机姿态&gt;掌握了旋转飞行&gt;爬升俯冲&gt;翻转逆飞&gt;改搭宇航推进器&gt;实现近地轨道飞行&gt;增加太阳能面板&gt;飞出地球&gt;冲向宇宙…..co..o….l[声音在遥远的身后回荡~~…忘记装反重力系统啦..飘啦……]</p>
+          <h2 id="1-数的自乘"><a href="#1-数的自乘" class="headerlink" title="1.数的自乘"></a>1.数的自乘</h2><pre><code class="js">题目:
+Write a function, persistence, that takes in a positive parameter num and returns its multiplicative persistence, which is the number of times you must multiply the digits in num until you reach a single digit.
+
+For example:
+
+ persistence(39) === 3 // because 3*9 = 27, 2*7 = 14, 1*4=4
+                       // and 4 has only one digit
+
+ persistence(999) === 4 // because 9*9*9 = 729, 7*2*9 = 126,
+                        // 1*2*6 = 12, and finally 1*2 = 2
+
+ persistence(4) === 0 // because 4 is already a one-digit number
+------------解答-----------
+function persistence(num, k=0) {
+   let str = num.toString();
+   let product = 1;
+   if (str.length===1){
+     return k;
+   }
+   for(let i=0;i&lt;str.length;i++){
+   product =product*parseInt(str[i]); 
+     }
+   k++;
+   return persistence(product,k);
+}
+-----明星回答---------
+    const persistence = num =&gt; {
+  return `${num}`.length &gt; 1 
+    ? 1 + persistence(`${num}`.split(&#39;&#39;).reduce((a, b) =&gt; a * +b)) 
+    : 0;
+}
+    ----2----
+function persistence(num) {
+   for (var i = 0; num &gt; 9; i++) {
+     num = num.toString().split(&#39;&#39;).reduce((t, c) =&gt; c * t);
+   }
+   return i;//这里还利用了var的弊端
+}
+</code></pre>
+<h2 id="2-验证码校验"><a href="#2-验证码校验" class="headerlink" title="2.验证码校验"></a>2.验证码校验</h2><pre><code class="js">ATM machines allow 4 or 6 digit PIN codes and PIN codes cannot contain anything but exactly 4 digits or exactly 6 digits.
+
+If the function is passed a valid PIN string, return true, else return false.
+
+eg:
+
+validatePIN(&quot;1234&quot;) === true
+validatePIN(&quot;12345&quot;) === false
+validatePIN(&quot;a234&quot;) === false
+----解答---终于写了一个完美答案---
+function validatePIN (pin) {
+  //return true or false
+  let x = /^(\d{4}|\d{6})$/
+  return x.test(pin)
+}
+---其他回答-----
+    function validatePIN (pin) {
+  return /^\d{4}(\d{2})?$/.test(pin);
+}
+-----2-----
+    function validatePIN (pin) {
+  if((pin.length==4||pin.length==6) &amp;&amp; pin &gt;= 0 &amp;&amp; (pin &lt; &quot;999999&quot; &amp;&amp; pin &gt;= &quot;0&quot;) )
+    return true ;
+  else 
+    return false ;
+ }
+---3----
+function validatePIN (pin) {
+  //return true or false
+  var n = pin.length;
+  if( n != 4 &amp;&amp; n != 6)
+      return false;
+  for (var i in pin)
+      if (pin[i] &gt; &#39;9&#39; || pin[i] &lt; &#39;0&#39;)
+          return false;
+  return true;
+}
+
+------
+关于正则匹配的大数据能力
+当关键词超过500个以上,那么使用正则是不明智的
+这时候需要使用python语言编写的flashtext(原理是树型排序搜索),但这似乎无法替换特殊字符
+显然在面对大数据时,正则不如---2---方法好,但--3--因为用了for循环依然不好
+</code></pre>
+<h2 id="3-过滤字符串"><a href="#3-过滤字符串" class="headerlink" title="3.过滤字符串"></a>3.过滤字符串</h2><pre><code class="js">In this kata you will create a function that takes a list of non-negative integers and strings and returns a new list with the strings filtered out.
+
+Example
+filter_list([1,2,&#39;a&#39;,&#39;b&#39;]) == [1,2]
+filter_list([1,&#39;a&#39;,&#39;b&#39;,0,15]) == [1,0,15]
+filter_list([1,2,&#39;aasf&#39;,&#39;1&#39;,&#39;123&#39;,123]) == [1,2,123]
+----我的解答--应该是完美答案了--
+function filter_list(l) {
+ return  l.filter(i=&gt;i+0==i)
+  }
+---明星答案---
+ function filter_list(l) {
+ return l.filter(v =&gt; typeof v == &quot;number&quot;)
+} 
+---2----
+function filter_list(l) {
+  return l.filter(i=&gt; typeof i !== &#39;string&#39;);
+}
+----3-----
+ const filter_list = l =&gt; l.filter(Number.isInteger);
+------4-----
+ const filter_list = l =&gt; l.filter(n =&gt; n === +n) 终于写的比他们都短了...  
+</code></pre>
+<h2 id="4-遮盖显示"><a href="#4-遮盖显示" class="headerlink" title="4.遮盖显示"></a>4.遮盖显示</h2><pre><code class="js">Usually when you buy something, you&#39;re asked whether your credit card number, phone number or answer to your most secret question is still correct. However, since someone could look over your shoulder, you don&#39;t want that shown on your screen. Instead, we mask it.
+
+Your task is to write a function maskify, which changes all but the last four characters into &#39;#&#39;.
+
+Examples
+maskify(&quot;4556364607935616&quot;) == &quot;############5616&quot;
+maskify(     &quot;64607935616&quot;) ==      &quot;#######5616&quot;
+maskify(               &quot;1&quot;) ==                &quot;1&quot;
+maskify(                &quot;&quot;) ==                 &quot;&quot;
+------我的解答------
+function maskify(x) {
+let k =&#39;&#39;
+if(x.length&gt;4){
+for(i=0;i&lt;x.length-4;i++){
+k +=&#39;#&#39;
+}
+return k+=x.substr(x.length-4,x.length)}
+return x
+}
+---1----
+function maskify(cc) {
+  return cc.replace(/(?=.{5})./g, &#39;#&#39;)
+}
+---2---
+    //这个递归稍微浪费性能,但正则也省不了多少
+function maskify(cc) {
+  if (cc.length &lt;= 4) return cc
+  else return &quot;#&quot; + maskify(cc.substring(1,cc.length))
+}  
+---3----
+function maskify(cc) {
+  return cc.slice(0, -4).replace(/./g, &#39;#&#39;) + cc.slice(-4);
+}
+---4---
+    function maskify(cc){
+  return cc.substr(0, cc.length - 4).replace(/./g, &#39;#&#39;) + cc.substr(-4)
+}
+--5----
+function maskify(cc) {
+  return cc.slice(-4).padStart(cc.length, &#39;#&#39;);
+}
+有太多方法了,,完全不知所云了
+性能上没啥区别就不追求了
+</code></pre>
+<h2 id="5-字符串转化"><a href="#5-字符串转化" class="headerlink" title="5.字符串转化"></a>5.字符串转化</h2><pre><code class="js">Example:
+
+Not Jaden-Cased: &quot;How can mirrors be real if our eyes aren&#39;t real&quot;
+Jaden-Cased:     &quot;How Can Mirrors Be Real If Our Eyes Aren&#39;t Real&quot;
+--------我的解答------
+String.prototype.toJadenCase = function () {
+  return this.valueOf().split(&#39; &#39;).map(v=&gt; v.replace(v[0],v[0].toUpperCase())).join(&#39; &#39;)
+
+};//原来可以不要valueof(),直接this就好了 //有一种超越其他人的感觉
+----其他解答----
+String.prototype.toJadenCase = function () {
+  return this.replace(/(^|\s)[a-z]/g, function(x){ return x.toUpperCase(); });
+};//这个写法很有趣,特别是后面的函数
+</code></pre>
+<h2 id="6-最特别的数"><a href="#6-最特别的数" class="headerlink" title="6.最特别的数"></a>6.最特别的数</h2><pre><code class="js">##Examples :
+
+iqTest(&quot;2 4 7 8 10&quot;) =&gt; 3 // Third number is odd, while the rest of the numbers are even
+
+iqTest(&quot;1 2 1 1&quot;) =&gt; 2 // Second number is even, while the rest of the numbers are odd
+----我的回答----
+function iqTest(n){
+  let even= [];
+  let odd =[];
+  n.split(&#39; &#39;).map((v,i)=&gt;Number(v)%2 == 0?even.push(i+1):odd.push(i+1));
+  return even.length&gt;odd.length?odd[0]:even[0]
+}
+----1----
+function iqTest(numbers){
+  numbers = numbers.split(&quot; &quot;).map(function(el){return parseInt(el)});
+
+  var odd = numbers.filter(function(el){ return el % 2 === 1});
+  var even = numbers.filter(function(el){ return el % 2 === 0});
+
+  return odd.length &lt; even.length ? (numbers.indexOf(odd[0]) + 1) : (numbers.indexOf(even[0]) + 1);
+}//这个是通过过滤
+---2----
+function iqTest(numbers){
+  var nums = numbers.split(&quot; &quot;).map(x =&gt; x % 2);  //变成余数数组
+  var sum = nums.reduce((a,b) =&gt; a + b);  //所有数相加
+  var target = sum &gt; 1 ? 0 : 1; //大于1则说明,偶数少
+  return nums.indexOf(target) + 1; //利用布尔值找索引值
+}//有点意思
+--3--
+const iqTest = numbers =&gt; {
+  numbers = numbers.replace(/(\d+\s)|(\d+$)/g, c =&gt; c % 2);//每个数都替换成余数
+  return numbers.indexOf(numbers.match(/0/g).length &gt; 1 ? &#39;1&#39; : &#39;0&#39;) + 1;//检索0的长度并根据判断返回索引值+1,这个太帅了
+}//正则
+</code></pre>
+<p>7.阶乘去0取固定位</p>
+<pre><code class="js">例子:
+输入15 出307674368
+输入10 出36288
+输入38 出742912 即38!=38*37*....*2*1=52300226466601111760007224100074291200000000
+--------我的回答-----
+var lines = [];
+var reader = require(&#39;readline&#39;).createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+reader.on(&#39;line&#39;, (line) =&gt; {
+  lines.push(line);
+});
+reader.on(&#39;close&#39;, () =&gt; {
+    function show(a){
+        if(a===1){
+            return 1
+        }else
+        return a*show(a-1)
+    }
+
+   let str =show(lines[0]).toString().replace(/[0]+\b/g,&#39;&#39;)
+
+   let newS;
+   if(str.length&lt;10){ newS=Number(str.replace(/^[0]+/g,&#39;&#39;))}
+   else{ newS = Number(str.slice((str.length-9),str.length).replace(/^[0]+/g,&#39;&#39;))}
+
+//   console.log(show(20));
+  console.log(newS);
+});//这题的难点不在于取值,而在于精度,超过16位的数字计算溢出或没有精度 如38!= 5.23022617466601e+44
+//思路是已知几相同数相乘,不影响末尾数值 比如121*165的后4位和121121*165165和21*65后2位,要保证后后9位数相同则要用2个数的后6位即可
+//当数值过大时我们分开成,比如38*36...*2 37*35...*1 再去这2个数的最后6位
+//1 ≦ N ≦ 1000000但这个很大
+</code></pre>
 
         </div>
         <!-- .entry-content -->
@@ -477,15 +706,15 @@
           
             <div class="post-nepre half previous">
           
-            <a href="/2020/07/19/算法战争/" rel="prev">
+            <a href="/2020/11/13/我的作品汇总/" rel="prev">
               <div class="background">
-                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="http://n.sinaimg.cn/spider2020615/661/w1920h1141/20200615/9d44-iuzasxs5501817.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="http://n.sinaimg.cn/spider2020615/661/w1920h1141/20200615/9d44-iuzasxs5501817.jpg">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://view.spiritx.xyz/images/2019/06/01/42466-61930743.md.png" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://view.spiritx.xyz/images/2019/06/01/42466-61930743.md.png">
               </div>
               <span class="label">
               Previous Post</span>
               <div class="info">
                 <h3>
-                算法战争(一)</h3>
+                作品汇总</h3>
                 <hr>
               </div>
             </a>
@@ -495,7 +724,7 @@
           
             <div class="post-nepre half next">
           
-            <a href="/2020/07/19/函数的防抖与节流/" rel="next">
+            <a href="/2020/07/03/函数的防抖与节流/" rel="next">
               <div class="background">
                 <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="http://n.sinaimg.cn/spider2020615/661/w1920h1141/20200615/9d44-iuzasxs5501817.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="http://n.sinaimg.cn/spider2020615/661/w1920h1141/20200615/9d44-iuzasxs5501817.jpg">
               </div>
