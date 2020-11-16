@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>ToDoList—最简单的待办事项列表</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/todolist.js"></script>
+</head>
+
+<body>
+    <header>
+        <section class="one">
+            <label for="title1">项目</label>
+            <input type="text" id="title1" name="title1" placeholder="添加项目" required="required" autocomplete="off">
+        </section>
+        <section class="two ">
+            <label for="title">内容</label>
+            <input class="lang" type="text" id="title" name="title" placeholder="添加ToDo" required="required" autocomplete="off">
+        </section>
+        <section class="three">
+            <label for="title3">措施</label>
+            <input type="text" id="title3" name="title3" placeholder="添加细节" required="required" autocomplete="off">
+        </section>
+    </header>
+    <content>
+    <section class="one">
+        <h2>项目进程 <span id="todocount1"></span></h2>
+        <ol id="todolist" class="demo-box">
+
+        </ol>
+        <h2>项目完成 <span id="donecount1"></span></h2>
+        <ul id="donelist">
+
+        </ul>
+    </section>
+    <section class="two s2">
+        <h2>内容进程 <span id="todocount"></span></h2>
+        <ol id="todolist" class="demo-box">
+
+        </ol>
+        <h2>内容完成<span id="donecount"></span></h2>
+        <ul id="donelist">
+
+        </ul>
+    </section>
+    <section class="three">
+        <h2>措施进程 <span id="todocount3"></span></h2>
+        <ol id="todolist" class="demo-box">
+
+        </ol>
+        <h2>措施完成 <span id="donecount3"></span></h2>
+        <ul id="donelist">
+
+        </ul>
+    </section></content>
+    <p>使用说明:</p>
+      
+         <p>1.主干结构:(项目>内容>措施)</p>
+         <p>2.分支选填:(点击选中主进程,选中为橙色,下级对应输入框填写分进程)</p>
+         <p>3.基本功能:(添加,删除,勾选,计数,存储任务)</p>
+    <footer>
+       
+       
+        Copyright &copy; 2020 by kermit
+    </footer>
+
+
+</body>
+
+</html>
