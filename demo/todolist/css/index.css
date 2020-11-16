@@ -3,7 +3,8 @@ body {
     padding: 0;
     font-size: 16px;
     background: #CDCDCD;
-    width: 1440px;
+    width: 100%;
+    min-width: 1150px;
 }
 
 header {
@@ -166,8 +167,14 @@ footer a {
     text-decoration: none;
     color: #999;
 }
-
- @media screen and (max-device-width: 620px) {
+html{
+  width: 100%;
+}
+  section {
+      width: 500px;
+      padding: 0 10px;
+  }
+ /* @media screen and (max-device-width: 620px) {
     section {
         width: 30%;
         padding: 0 2%;
@@ -175,11 +182,11 @@ footer a {
 }
 
 @media screen and (min-width: 620px) {
-  header{
+  header,body{
     width: 100%;
   }
     section {
         width: 500px;
         padding: 0 10px;
     }
-} 
+}  */
