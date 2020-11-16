@@ -1,0 +1,290 @@
+* {
+    margin: 0;
+    padding: 0;
+   font-size: 12px;
+   
+}
+body {
+    position: relative;
+    height: 3000px;
+    
+    
+  
+    /* 使得X滚动条无法出现 */
+    overflow: hidden;
+    color: white;
+}
+
+a {
+    margin-left: 8px;
+    text-decoration: none;
+    color: white;
+    font-weight: 900;
+    
+}
+li {
+    list-style-type: none;
+}
+img {
+    border-style:none;
+}
+input {
+    border:0;
+    outline: none;
+}
+#bodys {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat ; 
+    background-attachment: fixed;
+    background-position: center ;
+    background-size: cover;
+    background-image: url('https://kermit2020.github.io/img/custom/timg.jpg');
+   
+    
+}
+#box {
+    position: relative;
+    width: 800px;
+    margin:100px auto;
+    
+    height: 500px;
+    border-radius:5px ;
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.7);
+    overflow: hidden;
+}
+.header {
+    
+
+    height: 30px;
+    background-color: #2ab2ab;
+    color: white;
+    line-height: 25px;
+}
+.h_tip a {
+    font-size: 16px;
+    margin-right: 248px;
+}
+.h_control {
+    
+    
+    position: relative;
+    width: 140px;
+}
+.h_seach {
+    position: absolute;
+    height: 30px;
+    width: 140px;
+    border-radius: 20px ;
+    padding-left: 10px;
+    padding-right: 50px;
+    background: rgba(255, 255, 255, 0.5);
+    color:white;
+}
+.header button {
+    position: absolute;
+    height: 30px;
+    width: 40px;
+    border-radius: 20px ;
+    left: 464px;
+    border: none;
+    background: rgba(255, 255, 255, 0);
+    color:white;
+    outline: none;
+    z-index: 999;
+    transition: all 1s;
+    /* IE按钮下沉样式是电脑自带的只能通过更改电脑设置移除 */
+    
+}
+.header button:hover {
+    background-color: #4169E1;
+}
+.h_minhide {
+    font-size: 25px;
+    cursor: pointer;
+    position: absolute;
+    right:10px;
+    color:#F1F3F4;
+}
+.h_minhide:hover {
+    color: white;
+}
+.middle {
+    position: relative;
+    height: 430px;
+    background-color: #4169E1;
+    overflow: hidden;
+    z-index: 999;
+}   
+
+.m_catalog ul{
+    
+    display: block; 
+     padding-left: 10px; 
+    width: 180px;
+    height: 100%;
+    /* 如果没高度滚动条无效 */
+    overflow-y: auto;
+    -ms-overflow-style: none;
+}
+ .m_catalog ul::-webkit-scrollbar{
+    
+    display: none;
+} 
+ /*IE10,IE11,IE12*/
+ /* .m_catalog ul{
+     -ms-scroll-chaining: chained;
+    -ms-overflow-style: none;
+    -ms-content-zooming: zoom;
+    -ms-scroll-rails: none; 
+     -ms-content-zoom-limit-min: 100%;
+    -ms-content-zoom-limit-max: 500%;
+    -ms-scroll-snap-type: proximity;
+    -ms-scroll-snap-points-x: snapList(100%, 200%, 300%, 400%, 500%); 
+    -ms-overflow-style: none;
+    overflow-y: auto;
+}  */
+.m_catalog li {
+    
+    width: 90%;
+    height: 17px;
+    cursor: pointer;
+    margin-top: 10px;
+    padding: 8px 5%;
+    text-align: right;
+    border-radius:4px ;
+    transition: all 1s;
+    font-size: 13px;
+    color: white;
+    white-space: nowrap;/*不换行-文本超出省略-超出隐藏针对X轴 */
+    text-overflow:ellipsis;
+    overflow-x: hidden;
+}
+.m_catalog ul li:hover{
+    background: #2ab2ab;
+}
+.m_catalog li:nth-child(odd) { 
+    background: rgba(255, 255, 255, .3);
+}
+.m_catalog li:nth-child(even) { 
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.m_cover {
+    position: absolute;
+    left: 200px;
+    top: 20px; 
+    text-align: center;
+    width: 390px;
+    
+}
+.m_cover div {
+    word-break:break-all;
+    width:350px; 
+    overflow:auto;
+    color: wheat;
+    font-size: 20px;
+    font-weight: 900;
+    text-shadow: 2px 2px 5px wheat;
+    padding: 20px;
+}
+.m_cover img{
+    margin: auto;
+    display: block;
+    
+    width: 150px;
+    height: 150px;
+    border-radius:4px ;
+    cursor: pointer;
+}
+ .m_lyrics{
+    width: 180px;
+    height: 400px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 0 10px;
+    font-size: 12px;
+    color: wheat;
+    overflow-y: auto;
+    /* 兼容Ie 7+*/
+    -ms-overflow-style: none;
+    margin: 15px;
+}
+.m_lyrics::-webkit-scrollbar{
+    display: none;
+}
+.lyric span{
+    display: block;
+    margin: 4px 0;
+
+}
+ .floor { 
+     height: 52px;
+  position: relative;  
+   overflow:hidden;
+}  
+ .floor audio {
+     /* 兼容IE7+,IE浏览器问题多,音频播放器样式固定不能变更,
+     高度必须大于52px,定位后可调整位置,但是为了不压住滚动条,所以将位置放于底层 */
+     position: absolute; 
+     bottom: 5px; 
+    width: 100%;
+    height: 100%;
+    background-color: #eeeeee;
+    outline: none;
+}
+.switch {
+    position: absolute;
+    right: 10px;
+    top: 57px;
+    display: none; 
+    width: 30px;
+    height: 30px;
+    border-radius: 30px; 
+    background-color: #4169E1;   
+    font-weight: 900;
+    text-align: center;
+    line-height: 30px;
+    font-size: 16px;
+    z-index: 999;
+
+}
+.switch:hover{
+    box-shadow: 0 0 10px rgba(0,0,0,.5) inset;
+}
+
+.video_con video {
+    position: fixed;
+    width: 800px;
+    height: 546px;
+    left: 50%;
+    top: 50%;
+    margin-top: -273px;
+    transform: translateX(-50%);
+    z-index: 990;
+  }
+  .video_con .mask {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 980;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  .video_con .shutoff {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    background: url("../images/shutoff.png") no-repeat;
+    left: 50%;
+    margin-left: 400px;
+    margin-top: -273px;
+    top: 50%;
+    z-index: 995;
+  }
+  
