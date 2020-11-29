@@ -2197,6 +2197,12 @@ try {
   $(document).on('copy', function () {
     showMessage('你都复制了些什么呀，转载要记得加上出处哦', 5000)
   })
+  $('#clickMe>a>img').on('mouseover', function () {
+    showMessage('锵~锵~,kermit酱,转晕啦!', 3000)
+  })
+  $('.social-github').on('mouseover', function () {
+    showMessage('kermit酱的github', 3000)
+  })
   $.ajax({
     cache: true,
     url: 'https://cdn.jsdelivr.net/gh/moezx/live2d@v1.3/live2d/tips.json',
@@ -2256,11 +2262,11 @@ try {
         } else if (now > 14 && now <= 17) {
           Math.random()>0.5?text = '午后很容易犯困呢，幸福地睡个午觉吧？':text = 'kermit酱？啊啊啊,已经晕倒啦！！'
         } else if (now > 17 && now <= 19) {
-          text = '傍晚了！窗外的夕阳很美丽呢~'
+          text = '傍晚了！窗外的夕阳很美丽呢~要一起去看看嘛！'
         } else if (now > 19 && now <= 21) {
           Math.random()>0.5?text = '晚上好，今天过得怎么样？':text = '每个晚上都会有故事,你想讲一讲吗？'
         } else if (now > 21 && now <= 23) {
-          Math.random()>0.33?text = 'kermit酱,正在蓄电中,会发动夜猫功能吗？':Math.random()>0.5?text = '你真可爱呢,好想吻你一下(*^▽^*)':text = '假如吻你,你会害羞吗,(✿◡‿◡)'
+          Math.random()>0.33?text = 'kermit酱,正在蓄电中,会发动夜猫功能吗？':Math.random()>0.5?text = '你真可爱呢,好想吻你一下(*^▽^*)':text = '假如吻你,你..会害羞吗,(✿◡‿◡)'
           
         } else {
           text = '嗨~ 快来逗我玩吧！'
