@@ -2198,7 +2198,8 @@ try {
     showMessage('你都复制了些什么呀，转载要记得加上出处哦', 5000)
   })
   $('#clickMe>a>img').on('mouseover', function () {
-    showMessage('锵~锵~,kermit酱,转晕啦!', 3000)
+    showMessage(Math.random()>0.6?'锵~锵~,kermit酱,转晕啦!':'咕噜咕噜,根本停不下来啦~~', 2000)
+   
   })
   $('.social-github').on('mouseover', function () {
     showMessage('kermit酱的github', 3000)
