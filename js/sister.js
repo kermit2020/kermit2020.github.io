@@ -2222,6 +2222,7 @@ try {
   })
   ;(function () {
     var text
+    
     if (document.referrer !== '') {
       var referrer = document.createElement('a')
       referrer.href = document.referrer
@@ -2243,6 +2244,7 @@ try {
     } else {
       if (window.location.href == 'https://kermit2020.github.io/') {
         var now = new Date().getHours()
+        console.log("222");
         if (now > 23 || now <= 5) {
           text = '你是夜猫子呀？这么晚还不睡觉，明天起得来嘛?'
         } else if (now > 5 && now <= 7) {
