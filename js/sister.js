@@ -2241,7 +2241,7 @@ try {
         text = 'Hello! 来自 Google 的朋友<br>欢迎阅读<span style="color:#E06020;">『' + document.title.split(' - ')[0] + '』</span>'
       }
     } else {
-      if (window.location.href == 'https://2heng.xin/') {
+      if (window.location.href == 'https://kermit2020.github.io/') {
         var now = new Date().getHours()
         if (now > 23 || now <= 5) {
           text = '你是夜猫子呀？这么晚还不睡觉，明天起得来嘛?'
@@ -2262,7 +2262,7 @@ try {
         } else {
           text = '嗨~ 快来逗我玩吧！'
         }
-      } else if (window.location.href == 'https://2heng.xin/about/') {
+      } else if (window.location.href == 'https://kermit2020.github.io/about/') {
         text = 'Do you like me? ヾ(≧∇≦*)ゝ'
       } else {
         text = '欢迎阅读<span style="color:#E06020;">『' + document.title.split(' - ')[0] + '』</span>'
