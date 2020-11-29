@@ -2242,25 +2242,26 @@ try {
         text = 'Hello! 来自 Google 的朋友<br>欢迎阅读<span style="color:#E06020;">『' + document.title.split(' - ')[0] + '』</span>'
       }
     } else {
-      if (window.location.href == 'https://kermit2020.github.io/') {
+      console.log(window.location.href);
+      if (window.location.href == 'https://kermit2020.github.io/'||window.location.href == 'http://localhost:4000/') {
         var now = new Date().getHours()
-        console.log("222");
         if (now > 23 || now <= 5) {
-          text = '你是夜猫子呀？这么晚还不睡觉，明天起得来嘛?'
+          Math.random()>0.33?text = '哈哈,抓到一个夜猫子,不要太晚哦,注意身体！':Math.random()>0.5?text ='kermit酱会不会变成熊猫眼？':text ='我会不会变成话痨？好忧伤啊o(╥﹏╥)o'
         } else if (now > 5 && now <= 7) {
-          text = '早上好！一日之计在于晨，美好的一天就要开始了'
+          text = '早上好！那个懒猫kermit酱还没有起床呢,喂,快来打招呼呀？'
         } else if (now > 7 && now <= 11) {
           text = '上午好！工作顺利嘛？不要久坐，多起来走动走动哦！'
         } else if (now > 11 && now <= 14) {
-          text = '中午了，工作了一个上午，现在是午餐时间！'
+          text = '中午了，工作了一个上午，现在是kermit酱午餐时间o(╯□╰)o！'
         } else if (now > 14 && now <= 17) {
-          text = '午后很容易犯困呢，幸福地睡个午觉吧？'
+          Math.random()>0.5?text = '午后很容易犯困呢，幸福地睡个午觉吧？':text = 'kermit酱？啊啊啊,已经晕倒啦！！'
         } else if (now > 17 && now <= 19) {
           text = '傍晚了！窗外的夕阳很美丽呢~'
         } else if (now > 19 && now <= 21) {
-          text = '晚上好，今天过得怎么样？'
+          Math.random()>0.5?text = '晚上好，今天过得怎么样？':text = '每个晚上都会有故事,你想讲一讲吗？'
         } else if (now > 21 && now <= 23) {
-          text = '已经这么晚了呀，早点休息吧，晚安~'
+          Math.random()>0.33?text = 'kermit酱,正在蓄电中,会发动夜猫功能吗？':Math.random()>0.5?text = '你真可爱呢,好想吻你一下(*^▽^*)':text = '假如吻你,你会害羞吗,(✿◡‿◡)'
+          
         } else {
           text = '嗨~ 快来逗我玩吧！'
         }
