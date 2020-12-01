@@ -424,7 +424,7 @@
    
  <script>
    //自动码诗字语2
-   var binft = function (r) {
+   let binft = function (r) {
      function t() {
        return b[Math.floor(Math.random() * b.length)]
      }
@@ -433,7 +433,7 @@
      }
      function n(r) {
        for (var n = document.createDocumentFragment(), i = 0; r > i; i++) {
-         var l = document.createElement("span");
+         let l = document.createElement("span");
          l.textContent = e(), l.style.color = t(), n.appendChild(l)
        }
        return n
@@ -443,9 +443,17 @@
        c.step ? c.step-- : (c.step = g, c.prefixP < l.length ? (c.prefixP >= 0 && (c.text += l[c.prefixP]), c.prefixP++) : "forward" === c.direction ? c.skillP < t.length ? (c.text += t[c.skillP], c.skillP++) : c.delay ? c.delay-- : (c.direction = "backward", c.delay = a) : c.skillP > 0 ? (c.text = c.text.slice(0, -1), c.skillP--) : (c.skillI = (c.skillI + 1) % o.length, c.direction = "forward")), r.textContent = c.text, r.appendChild(n(c.prefixP < l.length ? Math.min(s, s + c.prefixP) : Math.min(s, t.length - c.skillP))), setTimeout(i, d)
      }
      var l = "",
-       o = ["青青陵上柏，磊磊涧中石。", "人生天地间，忽如远行客。", "斗酒相娱乐，聊厚不为薄。", "驱车策驽马，游戏宛与洛。", "洛中何郁郁，冠带自相索。", "长衢罗夹巷，王侯多第宅。", "两宫遥相望，双阙百余尺。", "极宴娱心意，戚戚何所迫？"].map(function (r) {
-         return r + ""
-       }),
+       o = ["一年三百六十日，春夏秋冬各九十。",
+"冬寒夏热最叹当，寒则如刀热如炙。",
+"春三秋九号温和，天气温和风雨多。",
+"一年细算良辰少，况且叹逢美景何。",
+"美景良辰淌遭遇，又有赏心并乐事。",
+"不烧高烛照芳樽，也是虚生在人世。",
+"古人有这达矣哉，劝人秉烛夜游来。",
+"春宵一刻千金价，我道千金买不回。"]
+// .map(function (z) {
+//          return z + ""})
+         ,
        a = 2,
        g = 1,
        s = 5,
@@ -526,7 +534,7 @@
 <article  class="post post-list-thumb post-list-thumb-left"  class="post post-list-thumb" itemscope="" itemtype="http://schema.org/BlogPosting">
 
   <div class="post-thumb">
-    <a href="/2018/12/12/Hexo-Theme-Sakura - 副本 (12)/">
+    <a href="/2018/12/12/Hexo-Theme-Sakura - 副本 (15)/">
       <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://static.2heng.xin/wp-content/uploads//2019/02/wallhaven-672007-1-1024x576.png">
     </a>
   </div>
@@ -535,7 +543,7 @@
       <div class="post-date">
         <i class="iconfont icon-time">
         </i>2018-12-12 22:12</div>
-      <a href="/2018/12/12/Hexo-Theme-Sakura - 副本 (12)/" class="post-title">
+      <a href="/2018/12/12/Hexo-Theme-Sakura - 副本 (15)/" class="post-title">
         <h3>Hexo-Theme-Sakura</h3>
       </a>
       <div class="post-meta">
@@ -556,7 +564,7 @@
       <div class="float-content">
         <p>hexo-sakura主题使用教程</p>
         <div class="post-bottom">
-          <a href="/2018/12/12/Hexo-Theme-Sakura - 副本 (12)/" class="button-normal">
+          <a href="/2018/12/12/Hexo-Theme-Sakura - 副本 (15)/" class="button-normal">
             <i class="iconfont icon-caidan"></i>
           </a>
         </div>
@@ -569,7 +577,7 @@
 <article  class="post post-list-thumb" itemscope="" itemtype="http://schema.org/BlogPosting">
 
   <div class="post-thumb">
-    <a href="/2018/12/12/Hexo-Theme-Sakura - 副本 (10)/">
+    <a href="/2018/12/12/Hexo-Theme-Sakura - 副本 (4)/">
       <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://static.2heng.xin/wp-content/uploads//2019/02/wallhaven-672007-1-1024x576.png">
     </a>
   </div>
@@ -578,7 +586,7 @@
       <div class="post-date">
         <i class="iconfont icon-time">
         </i>2018-12-12 22:12</div>
-      <a href="/2018/12/12/Hexo-Theme-Sakura - 副本 (10)/" class="post-title">
+      <a href="/2018/12/12/Hexo-Theme-Sakura - 副本 (4)/" class="post-title">
         <h3>Hexo-Theme-Sakura</h3>
       </a>
       <div class="post-meta">
@@ -592,14 +600,14 @@
         <span>
           <i class="iconfont icon-file"></i>
           
-            <a href="/categories/技术/">技术</a>
+            <a href="/categories/随想/">随想</a>
           
         </span>
       </div>
       <div class="float-content">
         <p>hexo-sakura主题使用教程</p>
         <div class="post-bottom">
-          <a href="/2018/12/12/Hexo-Theme-Sakura - 副本 (10)/" class="button-normal">
+          <a href="/2018/12/12/Hexo-Theme-Sakura - 副本 (4)/" class="button-normal">
             <i class="iconfont icon-caidan"></i>
           </a>
         </div>
@@ -655,7 +663,7 @@
 <article  class="post post-list-thumb" itemscope="" itemtype="http://schema.org/BlogPosting">
 
   <div class="post-thumb">
-    <a href="/2018/12/12/Hexo-Theme-Sakura - 副本 (4)/">
+    <a href="/2018/12/12/Hexo-Theme-Sakura - 副本 (12)/">
       <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://static.2heng.xin/wp-content/uploads//2019/02/wallhaven-672007-1-1024x576.png">
     </a>
   </div>
@@ -664,7 +672,7 @@
       <div class="post-date">
         <i class="iconfont icon-time">
         </i>2018-12-12 22:12</div>
-      <a href="/2018/12/12/Hexo-Theme-Sakura - 副本 (4)/" class="post-title">
+      <a href="/2018/12/12/Hexo-Theme-Sakura - 副本 (12)/" class="post-title">
         <h3>Hexo-Theme-Sakura</h3>
       </a>
       <div class="post-meta">
@@ -678,14 +686,14 @@
         <span>
           <i class="iconfont icon-file"></i>
           
-            <a href="/categories/随想/">随想</a>
+            <a href="/categories/技术/">技术</a>
           
         </span>
       </div>
       <div class="float-content">
         <p>hexo-sakura主题使用教程</p>
         <div class="post-bottom">
-          <a href="/2018/12/12/Hexo-Theme-Sakura - 副本 (4)/" class="button-normal">
+          <a href="/2018/12/12/Hexo-Theme-Sakura - 副本 (12)/" class="button-normal">
             <i class="iconfont icon-caidan"></i>
           </a>
         </div>
@@ -782,49 +790,6 @@
 <article  class="post post-list-thumb post-list-thumb-left"  class="post post-list-thumb" itemscope="" itemtype="http://schema.org/BlogPosting">
 
   <div class="post-thumb">
-    <a href="/2018/12/12/Hexo-Theme-Sakura - 副本 (8)/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://static.2heng.xin/wp-content/uploads//2019/02/wallhaven-672007-1-1024x576.png">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2018-12-12 22:12</div>
-      <a href="/2018/12/12/Hexo-Theme-Sakura - 副本 (8)/" class="post-title">
-        <h3>Hexo-Theme-Sakura</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-            <a href="/tags/web/">web<em>·</em></a>
-          
-            <a href="/tags/图集/">图集<em>·</em></a>
-          
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/图集/">图集</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p>hexo-sakura主题使用教程</p>
-        <div class="post-bottom">
-          <a href="/2018/12/12/Hexo-Theme-Sakura - 副本 (8)/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-    
-<article  class="post post-list-thumb" itemscope="" itemtype="http://schema.org/BlogPosting">
-
-  <div class="post-thumb">
     <a href="/2018/12/12/Hexo-Theme-Sakura - 副本 (9)/">
       <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://static.2heng.xin/wp-content/uploads//2019/02/wallhaven-672007-1-1024x576.png">
     </a>
@@ -856,6 +821,49 @@
         <p>hexo-sakura主题使用教程</p>
         <div class="post-bottom">
           <a href="/2018/12/12/Hexo-Theme-Sakura - 副本 (9)/" class="button-normal">
+            <i class="iconfont icon-caidan"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+  
+    
+<article  class="post post-list-thumb" itemscope="" itemtype="http://schema.org/BlogPosting">
+
+  <div class="post-thumb">
+    <a href="/2018/12/12/Hexo-Theme-Sakura - 副本 (8)/">
+      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://static.2heng.xin/wp-content/uploads//2019/02/wallhaven-672007-1-1024x576.png">
+    </a>
+  </div>
+  <div class="post-content-wrap">
+    <div class="post-content">
+      <div class="post-date">
+        <i class="iconfont icon-time">
+        </i>2018-12-12 22:12</div>
+      <a href="/2018/12/12/Hexo-Theme-Sakura - 副本 (8)/" class="post-title">
+        <h3>Hexo-Theme-Sakura</h3>
+      </a>
+      <div class="post-meta">
+        <span><i class="fa fa-tags"></i>
+        
+            <a href="/tags/web/">web<em>·</em></a>
+          
+            <a href="/tags/图集/">图集<em>·</em></a>
+          
+        </span>
+        <span>
+          <i class="iconfont icon-file"></i>
+          
+            <a href="/categories/图集/">图集</a>
+          
+        </span>
+      </div>
+      <div class="float-content">
+        <p>hexo-sakura主题使用教程</p>
+        <div class="post-bottom">
+          <a href="/2018/12/12/Hexo-Theme-Sakura - 副本 (8)/" class="button-normal">
             <i class="iconfont icon-caidan"></i>
           </a>
         </div>
