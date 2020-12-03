@@ -2261,7 +2261,8 @@ try {
         } else if (now > 11 && now <= 14) {
           text = '中午了，工作了一个上午，现在是kermit酱午餐时间o(╯□╰)o！'
         } else if (now > 14 && now <= 17) {
-          Math.random()>0.5?text = '午后很容易犯困呢，幸福地睡个午觉吧？':text = 'kermit酱？啊啊啊,已经晕倒啦！！'
+          // Math.random()>0.5?text = '午后很容易犯困呢，幸福地睡个午觉吧？':text = 'kermit酱？啊啊啊,已经晕倒啦！！'
+          text = ['午后很容易犯困呢，幸福地睡个午觉吧？','kermit酱？啊啊啊,已经晕倒啦！！']
         } else if (now > 17 && now <= 19) {
           text = '傍晚了！窗外的夕阳很美丽呢~要一起去看看嘛！'
         } else if (now > 19 && now <= 21) {
