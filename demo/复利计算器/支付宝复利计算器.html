@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ch-CN">
+
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>复利计算器</title>
+</head>
+<style>
+  .cc {
+    color: aqua;
+    font-size: 30px;
+  }
+
+  body {
+    background-color: pink;
+  }
+</style>
+
+<body>
+  <div id="test">
+    <p>请输入金额:<input type="number" v-model="listPrice.benjin" placeholder="请输入数据!">
+      请输入万份收益:<input type="number" v-model="listPrice.rixi" placeholder="请输入数据!">
+      请输入天数:<input type="number" v-model="listPrice.days" placeholder="请输入数据!"></p>
+    <button @click="clickNow">点击计算</button>
+    <h3>您的复利收益为:{{(listPrice.price-listPrice.benjin).toFixed(2)}}</h3>
+    <h3>您现在的总金额为:{{listPrice.price}}</h3>
+
+    <p>请输入金额:<input type="number" v-model="listPrice.benjin2" placeholder="请输入数据!">
+      请输入年息:<input type="number" v-model="listPrice.rixi2" placeholder="请输入数据!">
+      请输入结账天数:<input type="number" v-model="listPrice.days2" placeholder="请输入数据!"></p>
+    <button @click="clickNow2">点击计算</button>
+    <h3>您单年复利收益为:{{(listPrice.price2-listPrice.benjin2).toFixed(2)}}</h3>
+    <h3>您单年总金额为:{{listPrice.price2}}</h3>
+  </div>
+
+  <!-- <script src="https://unpkg.com/vue@1.0.28/dist/vue.js"></script> -->
+  <!-- <script src="https://cdn.bootcdn.net/ajax/libs/vue/1.0.28/vue.min.js"></script> -->
+  <!-- <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.0.0/vue.min.js"></script> -->
+  <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.12/vue.min.js">//最新</script>
+  <!-- <script src="https://cdn.bootcdn.net/ajax/libs/vue/3.0.0-beta.9/vue.cjs.min.js">//不能用</script> -->
+
+  <script>
+    'use strict'
+    const vm = new Vue({
+      el: '#test',
+      data: {
+        listPrice: {
+          benjin: null,
+          rixi: null,
+          days: null,
+          shouyi: 0,
+          price: 0,
+          benjin2: null,
+          rixi2: null,
+          days2: null,
+          shouyi2: 0,
+          price2: 0
+        }
+      },
+      mounted() {
+        if (localStorage.getItem('listPrice')) { this.listPrice = JSON.parse(localStorage.getItem('listPrice')) }
+      },
+      methods: {
+        // changeColor(e) {
+        //   let arr = ['red', 'oranger', 'yellow', 'green', 'aqua', 'bule', 'purple']
+        //   e.preventDefault()
+        //   e.target.style.color = arr[this.flag]
+        //   this.flag++
+        //   if (this.flag >= arr.length) {
+        //     this.flag = 0
+        //   }
+        // }
+        clickNow() {
+
+
+          this.listPrice.price = (this.listPrice.benjin * (1 + this.listPrice.rixi / 10000) ** this.listPrice.days).toFixed(2)
+          localStorage.setItem('listPrice', JSON.stringify(this.listPrice))
+        },
+        clickNow2() {
+
+
+          this.listPrice.price2 = (this.listPrice.benjin2 * (1 + this.listPrice.rixi2 * this.listPrice.days2 / 36000) ** parseInt(Math.round(360 / this.listPrice.days2))).toFixed(2)
+          localStorage.setItem('listPrice',JSON.stringify(this.listPrice))
+        },
+        //         /* ===== 浮点型数据的加、减、乘、除 ===== */
+        //  add(arg1, arg2) { // 加法
+        //      let r1, r2, m
+        //      try {
+        //          r1 = arg1.toString().split('.')[1].length
+        //      } catch (e) {
+        //          r1 = 0
+        //      }
+        //      try {
+        //          r2 = arg2.toString().split('.')[1].length
+        //      } catch (e) {
+        //          r2 = 0
+        //      }
+        //      m = Math.pow(10, Math.max(r1, r2))
+        //      return (arg1 * m + arg2 * m) / m
+        //  },
+
+        //  sub(arg1, arg2) { // 减法
+        //      let r1, r2, m, n
+        //      try {
+        //          r1 = arg1.toString().split('.')[1].length
+        //      } catch (e) {
+        //          r1 = 0
+        //      }
+        //      try {
+        //          r2 = arg2.toString().split('.')[1].length
+        //      } catch (e) {
+        //          r2 = 0
+        //      }
+        //      m = Math.pow(10, Math.max(r1, r2))
+        //      n = (r1 >= r2) ? r1 : r2
+        //      return ((arg1 * m - arg2 * m) / m).toFixed(n)
+        //  },
+
+        // mul(arg1, arg2) { // 乘法
+        //      let m = 0
+        //      let s1 = arg1.toString()
+        //      let s2 = arg2.toString()
+        //      try {
+        //          m += s1.split('.')[1].length
+        //      } catch (e) {
+        //      }
+        //      try {
+        //          m += s2.split('.')[1].length
+        //      } catch (e) {
+        //      }
+        //      return Number(s1.replace('.', '')) * Number(s2.replace('.', '')) / Math.pow(10, m)
+        //  },
+
+        //  div(arg1, arg2) { // 除法
+        //      let t1 = 0
+        //      let t2 = 0
+        //      let r1
+        //      let r2
+        //      try {
+        //          t1 = arg1.toString().split('.')[1].length
+        //      } catch (e) {
+        //      }
+        //      try {
+        //          t2 = arg2.toString().split('.')[1].length
+        //      } catch (e) {
+        //      }
+        //      r1 = Number(arg1.toString().replace('.', ''))
+        //      r2 = Number(arg2.toString().replace('.', ''))
+        //      let intDiv = r1 / r2
+        //      let pow = Math.pow(10, t2 - t1)
+        //      return mul(intDiv, pow) // 这里用上面定义好的乘法运算
+        //  }
+        //  /* ===== 浮点型数据的加、减、乘、除 ===== */
+      },
+      computed: {
+        // fullName1() {//当任意数值变化就会进行,需要方法名
+        //   if (this.firstName) return this.firstName + ' ' + this.lastName
+        // },
+        // fullName3: {//这个没有括号
+        //   get() { if (this.firstName) return this.firstName + ' ' + this.lastName },
+        //   set(newV) {
+        //     let name = newV.trim().split(' ')
+        //     // console.log(name);
+        //     if (name[0]) { this.firstName = name[0] } else { this.firstName = '' }
+        //     if (name[1]) { this.lastName = name[1] } else { this.lastName = '' }
+        //   }
+        // }
+      },
+
+
+
+    })
+
+  </script>
+</body>
+
+</html>
