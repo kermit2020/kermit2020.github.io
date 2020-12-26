@@ -1,106 +1,102 @@
 <!DOCTYPE html>
 <html lang="ch-CN">
+
 <head><meta name="generator" content="Hexo 3.9.0">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="./css/index.css">
-    
-    <title>音随心寻〖快乐音乐盒〗</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./css/index.css">
+
+  <title>音随心寻〖快乐音乐盒〗</title>
 </head>
+
 <body>
-<div id="bodys">
-   <div id="box">
-       <div id="vapp">
-           <div class="header">
-               <span class="h_tip"><a href="javascript:;">Music</a> </span>
-               <span id="h_control"><input class="h_seach" type="text" v-model="query" @keyup.enter="seachMusic">
-               <button @click="seachMusic">搜索</button></span>
-               <span class="h_minhide" title="最小化音乐盒">×</span>
-           </div>
-           <div class="middle">
-               <span class="m_catalog">
-                   <ul>
-                       <li v-for="(arr,index) in musicList" :title="arr.name+'-'+arr.artists[0].name" @click="playMusic(arr.id,arr.name,arr.artists[0].name)">{{arr.name}}-{{arr.artists[0].name}}
-                           <span>
-                        <!-- <i @click="playMV(arr.mvid)" v-if="arr.mvid!=0"></i> -->
-                      </span>
-                    </li>
-                     
-                   </ul>
-               </span>
-               <div class="m_cover">
-                   <div>{{names}}</div>
-                   <img :src="cover?cover:'https://kermit2020.github.io/img/custom/timg.jpg'" alt>
-                </div>
-               <div class="m_lyrics">
-                <span v-for="lrc in lyrics">{{lrc.toString().substring(10) }}<br></span>
-               </div>
-           </div>
-           <div class="floor">
-            <audio autoplay controls loop :src="url">
-                
-               
-       </audio></div>
-       
-   </div>
-</div> 
-   <div class="switch" title="展开音乐盒">√</div>
+  <div id="bodys">
+    <div id="box">
+      <div id="vapp">
+        <div class="header">
+          <span class="h_tip"><a href="javascript:;">Music</a> </span>
+          <span id="h_control"><input class="h_seach" type="text" v-model="query" @keyup.enter="seachMusic">
+            <button @click="seachMusic">搜索</button></span>
+          <span class="h_minhide" title="最小化音乐盒">×</span>
+        </div>
+        <div class="middle">
+          <span class="m_catalog">
+            <ul>
+              <li v-for="(arr,index) in musicList" :title="arr.name+'-'+arr.artists[0].name" @click="playMusic(arr.id,arr.name,arr.artists[0].name)">{{arr.name}}-{{arr.artists[0].name}}
+                <span>
+                  <!-- <i @click="playMV(arr.mvid)" v-if="arr.mvid!=0"></i> -->
+                </span>
+              </li>
+            </ul>
+          </span>
+          <div class="m_cover">
+            <div>{{names}}</div>
+            <img :src="cover?cover:'https://cdn.jsdelivr.net/gh/kermit2020/CDN-blog/img/timg.jpg'" alt>
+          </div>
+          <div class="m_lyrics">
+            <span v-for="lrc in lyrics">{{lrc.toString().substring(10) }}<br></span>
+          </div>
+        </div>
+        <div class="floor">
+          <audio autoplay controls loop :src="url">
+        </audio></div>
+      </div>
+    </div>
+    <div class="switch" title="展开音乐盒">√</div>
 
-
-
-
-   <script src="./js/jquery-3.5.0.min.js"></script>
-    
-   
-<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-        <!-- 开发环境版本，包含了有帮助的命令行警告 -->
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-<script src="js/index.js"></script>
-<script>
-//    鼠标拖动播放器效果
-//     header范围内按住鼠标拖动播放器移动
-var gapY,
-    gapX;
-$(function(){
-    $('.header').mousedown(function(e){
-        var x =e.pageX;
-        var offset = $(this).offset();
-        var y =e.pageY;
-        //因为移动中会出现小数不利于定位.
-         gapX =x - parseInt(offset.left);
-         gapY =y - parseInt(offset.top);
+    <script src="./js/jquery-3.5.0.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- 开发环境版本，包含了有帮助的命令行警告 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/index.js"></script>
+    <script>
+      //    鼠标拖动播放器效果
+      //     header范围内按住鼠标拖动播放器移动
+      var gapY,
+        gapX;
+      $(function () {
+        $('.header').mousedown(function (e) {
+          var x = e.pageX;
+          var offset = $(this).offset();
+          var y = e.pageY;
+          console.log(offset);
+          console.log(window);
+          //因为移动中会出现小数不利于定位.
+          gapX = x - parseInt(offset.left);
+          gapY = y - parseInt(offset.top);
           //这里是JS用等于函数
-        document.onmousemove = function(e){
+          document.onmousemove = function (e) {
             //兼容IE8-
             e = e || window.event;
             //不懂就画图,数学和绘图都是我强项
             //offset是不能直接赋值的,我差点忘记了,不过这里不是JS而且不用加PX
             //看似一样,但是JS是通过定位实现的,有层次问题和复杂度
-            $('#box').offset({left:e.pageX - gapX ,top:e.pageY - gapY });
-        }
-        document.onmouseup = function(){
+            $('#box').offset({ left: e.pageX - gapX, top: (e.pageY - gapY) <= 0 ? 0 : (e.pageY - gapY) < (innerHeight - 30) ? (e.pageY - gapY) : (innerHeight - 30) });
+          }
+          document.onmouseup = function () {
             document.onmousemove = null;
-        }
-        
-    })
-    $('.h_minhide').click(function(){
-        $('#box').hide();
-        $(".switch").show();
-    })
-    $('.switch').click(function(){
-        $('#box').show();
-        $(".switch").hide();
-    })
+          }
 
-})
+        })
+        $('.h_minhide').click(function () {
+          $('#box').hide();
+          $(".switch").show();
+        })
+        $('.switch').click(function () {
+          $('#box').show();
+          $(".switch").hide();
+        })
+
+      })
 
 
 //功能2 缩小播放器
 
 //功能3 还原播放器
-</script>
+    </script>
 
 </div></body>
+
 </html>
