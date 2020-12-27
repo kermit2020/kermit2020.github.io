@@ -642,8 +642,7 @@ const iqTest = numbers =&gt; {
   return numbers.indexOf(numbers.match(/0/g).length &gt; 1 ? &#39;1&#39; : &#39;0&#39;) + 1;//检索0的长度并根据判断返回索引值+1,这个太帅了
 }//正则
 </code></pre>
-<p>7.阶乘去0取固定位</p>
-<pre><code class="js">例子:
+<h2 id="7-阶乘去0取固定位"><a href="#7-阶乘去0取固定位" class="headerlink" title="7.阶乘去0取固定位"></a>7.阶乘去0取固定位</h2><pre><code class="js">例子:
 输入15 出307674368
 输入10 出36288
 输入38 出742912 即38!=38*37*....*2*1=52300226466601111760007224100074291200000000
@@ -676,6 +675,31 @@ reader.on(&#39;close&#39;, () =&gt; {
 //思路是已知几相同数相乘,不影响末尾数值 比如121*165的后4位和121121*165165和21*65后2位,要保证后后9位数相同则要用2个数的后6位即可
 //当数值过大时我们分开成,比如38*36...*2 37*35...*1 再去这2个数的最后6位
 //1 ≦ N ≦ 1000000但这个很大
+</code></pre>
+<p>8.任意小于自然数的列,能被3或5整除的数总计</p>
+<pre><code class="js">//我的答案
+function solution(n){
+ let t = 0
+ if(n&gt;0){
+   for(let i =1;i&lt;n;i++){
+  (i%3===0||i%5===0)?t+=i:t
+ }
+   }
+  return t
+}
+//我认为聪明回答
+function solution(number){
+  for(acc=0; --number &gt; 2;){
+    acc = !(number%3) || !(number%5) ? acc + number : acc;
+  }
+  return acc;
+}
+//2
+solution = n =&gt; {
+  let s = 0;
+  for (let i = 0; i &lt; n; i++) s += i % 3 ? i % 5 ? 0 : i : i;
+  return s;
+} //有点没搞懂
 </code></pre>
 
         </div>
