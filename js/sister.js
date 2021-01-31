@@ -2281,12 +2281,12 @@ try {
     }
     showMessage(text, 12000)
   })()
-  window.setInterval(showHitokoto, 30000)
-  function showHitokoto() {
-    $.getJSON('https://api.shino.cc/hitokoto/?encode=json', function (result) {
-      showMessage(result.hitokoto, 16000)
-    })
-  }
+  // window.setInterval(showHitokoto, 30000)
+  // function showHitokoto() {
+  //   $.getJSON('https://api.shino.cc/hitokoto/?encode=json', function (result) {
+  //     showMessage(result.hitokoto, 16000)
+  //   })
+  // }
   function showMessage(text, timeout) {
     if (Array.isArray(text)) text = text[Math.floor(Math.random() * text.length + 1) - 1]
     $('.mashiro-tips').stop()
