@@ -628,7 +628,7 @@ to {
     padding:8px 5px;
     z-index:9999
 }
-@charset "utf-8";
+/* @charset "utf-8"; */
 #content {
     animation:main 1s;
     position: relative;
@@ -4373,7 +4373,7 @@ i.iconfont.js-toggle-search.iconsearch {
 }
 .s-search input {
     font-size:1rem;
-    background:#none;
+    background:none;
     padding:12px 24px 12px 64px;
     width:100%;
     outline:0;
@@ -7737,8 +7737,9 @@ img[src*="#in-center"] {
     #banner_wave_1,#banner_wave_2 {
     display:none
 }
-}#video-add {
-    /*display:none !important*/
+}
+#video-add {
+    /*? display:none !important 这个无法禁止首屏+视频键*/ 
 }
 .accordionMenu {
     color:#424242;
