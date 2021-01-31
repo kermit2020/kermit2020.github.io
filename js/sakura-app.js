@@ -491,16 +491,17 @@ function checkBgImgCookie() {
       $('.blank').css('background-color', 'rgba(255,255,255,1)')
       $('.pattern-center').removeClass('pattern-center').addClass('pattern-center-sakura')
       $('.headertop-bar').removeClass('headertop-bar').addClass('headertop-bar-sakura')
-    } else if (bgurl == 'https://api.shino.cc/bing/') {
-      mashiro_global.variables.skinSecter = true
-      mashiro_global.variables.isNight = true
-      $('#night-mode-cover').css('visibility', 'hidden')
-      $('body').css('background-image', 'url(' + bgurl + ')')
-      $('.blank').css('background-color', 'rgba(255,255,255,1)')
-      $('.pattern-center').removeClass('pattern-center').addClass('pattern-center-sakura')
-      $('.headertop-bar').removeClass('headertop-bar').addClass('headertop-bar-sakura')
-    } else {
-    }
+    } 
+    // else if (bgurl == 'https://api.shino.cc/bing/') {
+    //   mashiro_global.variables.skinSecter = true
+    //   mashiro_global.variables.isNight = true
+    //   $('#night-mode-cover').css('visibility', 'hidden')
+    //   $('body').css('background-image', 'url(' + bgurl + ')')
+    //   $('.blank').css('background-color', 'rgba(255,255,255,1)')
+    //   $('.pattern-center').removeClass('pattern-center').addClass('pattern-center-sakura')
+    //   $('.headertop-bar').removeClass('headertop-bar').addClass('headertop-bar-sakura')
+    // } else {
+    // }
   } else {
     return false
   }
@@ -536,27 +537,27 @@ $(document).ready(function () {
     })
   }
 
-  function changeBGnoTrans(tagid, url) {
-    $('.skin-menu ' + tagid).click(function () {
-      mashiro_global.variables.skinSecter = true
-      mashiro_global.variables.isNight = true
-      $('#night-mode-cover').css('visibility', 'hidden')
-      $('body').css('background-image', 'url(' + url + ')')
-      $('.blank').css('background-color', 'rgba(255,255,255,1)')
-      $('.pattern-center').removeClass('pattern-center').addClass('pattern-center-sakura')
-      $('.headertop-bar').removeClass('headertop-bar').addClass('headertop-bar-sakura')
-      $('#banner_wave_1').addClass('banner_wave_hide_fit_skin')
-      $('#banner_wave_2').addClass('banner_wave_hide_fit_skin')
-      closeSkinMenu()
-      setCookie('bgImgSetting', url, 30)
-    })
-  }
+  // function changeBGnoTrans(tagid, url) {
+  //   $('.skin-menu ' + tagid).click(function () {
+  //     mashiro_global.variables.skinSecter = true
+  //     mashiro_global.variables.isNight = true
+  //     $('#night-mode-cover').css('visibility', 'hidden')
+  //     $('body').css('background-image', 'url(' + url + ')')
+  //     $('.blank').css('background-color', 'rgba(255,255,255,1)')
+  //     $('.pattern-center').removeClass('pattern-center').addClass('pattern-center-sakura')
+  //     $('.headertop-bar').removeClass('headertop-bar').addClass('headertop-bar-sakura')
+  //     $('#banner_wave_1').addClass('banner_wave_hide_fit_skin')
+  //     $('#banner_wave_2').addClass('banner_wave_hide_fit_skin')
+  //     closeSkinMenu()
+  //     setCookie('bgImgSetting', url, 30)
+  //   })
+  // }
   changeBG('#sakura-bg', 'https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/themebg/sakura.png')
   changeBG('#gribs-bg', 'https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/themebg/plaid.jpg')
   changeBG('#pixiv-bg', 'https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/themebg/star.png')
   changeBG('#KAdots-bg', 'https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/themebg/point.png')
   changeBG('#totem-bg', 'https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/themebg/little-monster.png')
-  changeBGnoTrans('#bing-bg', 'https://api.shino.cc/bing/')
+  // changeBGnoTrans('#bing-bg', 'https://api.shino.cc/bing/')//切换主题第7个图标,接api到网络库
   $('.skin-menu #white-bg').click(function () {
     mashiro_global.variables.skinSecter = false
     mashiro_global.variables.isNight = false
